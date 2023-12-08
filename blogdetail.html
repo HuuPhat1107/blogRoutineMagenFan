@@ -1766,6 +1766,7 @@
                 </ul>
             </div>
             <main id="maincontent" class="page-main">
+
                 <div class="menu-cate">
                     <ul>
                         <li class="menuCate-item"><a href="#xu-huong">Xu hướng</a></li>
@@ -3174,12 +3175,15 @@
                                 </div>
                             </div>
                             <div class="content-right">
-                                <div class="sticky-sidebar">               
+                                <div class="sticky-sidebar">
                                     <div class="blog-table-content">
                                         <div class="post-index">
                                             <div class="section-title">
                                                 <h4 class="text-tilte">Mục lục</h4>
                                                 <hr class="filler-line">
+                                                <img id="toggleOutline"
+                                                    src="https://admin.routine.vn/media/wysiwyg/arrow.png"
+                                                    alt="Toggle Mục lục">
                                             </div>
                                             <nav class="content-outline">
                                                 <ul
@@ -3370,7 +3374,9 @@
                                     </div>
                                     <div class="blog-banner-right">
                                         <a href="#">
-                                            <img src="https://routine.vn/media/magefan_blog/uu-dai-thang-12-sieu-sale-cuoi-nam.jpg" alt="" srcset="">
+                                            <img
+                                                src="https://routine.vn/media/magefan_blog/uu-dai-thang-12-sieu-sale-cuoi-nam.jpg"
+                                                alt srcset>
                                         </a>
                                     </div>
                                 </div>
@@ -3381,7 +3387,7 @@
                     <div class="blog-tag">
                         <div class="blogs-featured-post">
                             <div class="blog-tag-title">
-                                <strong>xu hướng</strong>
+                                <strong>Tin tức thời trang</strong>
                             </div>
                             <div class="tagclaud-hld">
                                 <span class="largest">
@@ -3431,19 +3437,23 @@
                                 </span>
                             </div>
                             <div class="blog-tag-description">
-                                <p>Routine cung cấp những nội dung chính
-                                    liên quan đến thế giới thời trang, làm
-                                    đẹp chuyên nghiệp và những bí quyết giúp
-                                    bạn luôn tự tin như một cô gái Routine
-                                    “Sắc sảo, sành điệu và sâu lắng”. Ngoài
-                                    ra, Routine còn luôn cập nhật những chia
-                                    sẻ ngắn, bí quyết về thời trang, làm đẹp
-                                    cùng những trang phục đẹp hàng ngày,
-                                    đồng thời giới thiệu những tác phẩm văn
-                                    hóa, nguồn cảm hứng và các blog thú vị
-                                    bình luận về phong cách sống, quan điểm
-                                    sống từ biên tập viên của Phái đẹp
-                                    Routine, độc giả và blogger.
+                                <p><strong>Tin thời trang Routine</strong> là
+                                    một <strong>trang blog thời
+                                        trang</strong> chuyên cung cấp những nội
+                                    dung, tin
+                                    tức hot, mới nhất với những thông tin được
+                                    cập nhật không ngừng về xu hướng nổi bật,
+                                    kiến thức và mẹo vặt hữu ích trong việc lựa
+                                    chọn và mix&match những quần áo trang phục
+                                    thường ngày dành cho cả nam và nữ, giúp bạn
+                                    luôn cảm thấy thoải mái, tự tin thể hiện vẻ
+                                    đẹp của riêng mình mọi lúc mọi nơi. Ngoài
+                                    ra, đây còn là <strong> kênh thông tin thời
+                                        trang
+                                        chính thức</strong> từ nhà Routine, luôn
+                                    cập nhật
+                                    những sự kiện, chương trình khuyến mãi, ưu
+                                    đãi nổi bật và sớm nhất.
                                 </p>
                             </div>
                         </div>
@@ -3955,6 +3965,23 @@
                 ]
             });
         });</script>
+        <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const toggleOutline = document.getElementById('toggleOutline');
+            const contentOutline = document.querySelector('.content-outline');
+
+            toggleOutline.addEventListener('click', function() {
+                contentOutline.classList.toggle('hidden');
+                if (!contentOutline.classList.contains('hidden')) {
+                    contentOutline.style.opacity = 1;
+                } else {
+                    contentOutline.style.opacity = 0;
+                }
+                toggleOutline.style.transform = toggleOutline.style.transform ? '' : 'rotate(180deg)';
+            });
+        });
+
+        </script>
 
         <script>
                 window.amlazycallback = function () {
