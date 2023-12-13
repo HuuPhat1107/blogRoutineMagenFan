@@ -400,6 +400,9 @@ body {
     justify-content: center;
     align-items: center;
 }
+.blogs-featured-post .tagclaud-hld h4{ 
+    margin: 0;
+}
 .blogs-featured-post a {
     color: #000;
     display: block;
@@ -437,7 +440,7 @@ body {
 }
 .menu-cate .menuCate-item a{
     font-weight: 700;
-    font-size: 14px;
+    font-size: 16px;
     color: #000;
     background-color: #fff;
     border: 1px solid #adadad;
@@ -510,7 +513,7 @@ body {
 .blog-table-content{
     margin-bottom: 40px;
     background: #e7e7e7;
-    padding: 20px 24px 24px;
+    padding: 5px 20px 5px;
     border-radius: 16px;
     transition: all .3s;
 }
@@ -711,5 +714,11 @@ body {
     }
     .blog-tag { 
         margin: 50px 0;
+    }
+    .blog-table-content{ 
+        padding: 20px 24px 24px;
+    }
+    .sticky-sidebar .section-title #toggleOutline { 
+        width: 40px;
     }
 }
