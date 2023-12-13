@@ -3178,7 +3178,7 @@
                                 <div class="sticky-sidebar">
                                     <div class="blog-table-content">
                                         <div class="post-index">
-                                            <div class="section-title">
+                                            <div class="section-title  toggle-outline">
                                                 <h4 class="text-tilte">Mục lục</h4>
                                                 <hr class="filler-line">
                                                 <img id="toggleOutline"
@@ -3967,19 +3967,24 @@
         });</script>
         <script>
         document.addEventListener('DOMContentLoaded', function() {
-            const toggleOutline = document.getElementById('toggleOutline');
-            const contentOutline = document.querySelector('.content-outline');
+        const toggleOutlines = document.querySelectorAll('.toggle-outline');
 
+        toggleOutlines.forEach(function(toggleOutline) {
             toggleOutline.addEventListener('click', function() {
+                const contentOutline = this.nextElementSibling;
+
                 contentOutline.classList.toggle('hidden');
                 if (!contentOutline.classList.contains('hidden')) {
                     contentOutline.style.opacity = 1;
                 } else {
                     contentOutline.style.opacity = 0;
                 }
-                toggleOutline.style.transform = toggleOutline.style.transform ? '' : 'rotate(180deg)';
+
+                const arrowIcon = this.querySelector('img');
+                arrowIcon.style.transform = arrowIcon.style.transform ? '' : 'rotate(180deg)';
             });
         });
+    });
 
         </script>
 
